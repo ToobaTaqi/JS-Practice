@@ -1,0 +1,104 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>as5-q9</title>
+    <link rel="stylesheet" href="../../../Styling/style.css">
+    <style>
+        input {
+            width: 200px;
+            height: 30px;
+            background-color: white;
+            border-radius: 10px;
+            text-align: center;
+            font-size: 15px;
+            border: #bda8d1;
+            margin: 5px;
+            display: grid;
+            justify-content: right;
+        }
+
+        /* h3{
+    text-align: left;
+} */
+        button {
+            width: 200px;
+            height: 30px;
+            background-color: #bda8d1;
+            border-radius: 10px;
+            text-align: center;
+            font-size: 10px;
+            border: white;
+            margin: 5px;
+            box-shadow: 2px 2px 2px 2px #634979;
+            color: white;
+        }
+
+
+
+        #output {
+            text-align: center;
+            color: white;
+            margin: 5px;
+            border: 1px solid white;
+            background-color: #634979;
+            padding: 10px;
+            border-radius: 10px;
+
+        }
+
+        /* label {
+            text-align: center;
+        } */
+
+        .subbox {
+            margin: 10px;
+
+
+        }
+    </style>
+</head>
+
+<body>
+    <h1>Q # 9</h1>
+    <p>Write a
+        script to convert the total currency to Pakistani Rupees</p>
+    <div class="box">
+        <small>output box</small>
+        <div class="box2">
+
+            <h3><u>Currency in PKR</u></h3>
+            <div id="output"></div>
+          
+
+
+
+
+
+        </div>
+    </div>
+
+    <a href="../assignment5.html">All Questions of Assignment 5</a>
+
+
+    <script>
+        var usd = 10
+        var pkr_usd = 104.80
+        var sr = 25
+        var pkr_sr = 28 
+
+        var pkr=parseInt(usd*pkr_usd)+parseInt(sr*pkr_sr)
+       
+        //Perform all calculations in a single expression.
+        //(Exchange rates : 1 US Dollar = 104.80 Pakistani Rupee
+        //and 1 Saudi Riyal = 28 Pakistani Rupee)
+        document.getElementById("output").innerHTML = 'Total Currency in PkR: '+pkr
+
+
+    </script>
+</body>
+
+</html>

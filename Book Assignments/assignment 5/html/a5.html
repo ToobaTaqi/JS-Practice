@@ -1,0 +1,137 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>as5-q5</title>
+    <link rel="stylesheet" href="../../../Styling/style.css">
+    <style>
+        table {
+            border-collapse: collapse;
+            margin-top: 20px;
+            display: flex;
+            justify-self: center;
+        }
+
+        input {
+            /* max-width: 250px;
+            max-height: 250px; */
+            width: 250px;
+            height: 50px;
+            background-color: white;
+            border-radius: 15px;
+            text-align: center;
+            font-size: 15px;
+            border: #bda8d1;
+            margin: 5px;
+        }
+
+        button {
+            width: 50px;
+            height: 50px;
+            background-color: #bda8d1;
+            border-radius: 15px;
+            text-align: center;
+            font-size: 10px;
+            border: white;
+            margin: 5px;
+            box-shadow: 2px 2px 2px 2px #634979;
+        }
+        button:hover{
+            background-color: white;
+        }
+.subbox{
+    display: flex;
+    justify-content: center;
+}
+        th {
+            border: 3px solid white;
+            padding: 10px;
+        }
+
+        td {
+            border: 1px solid white;
+            padding: 10px;
+            text-align: center;
+        }
+    </style>
+</head>
+
+<body>
+    <h1>Q # 5</h1>
+    <p>Write a script to display multiplication table of any
+        number in your browser</p>
+    <div class="box">
+        <small>output box</small>
+        <div class="box2">
+
+
+            <div class="subbox">
+                <input class="inpt" type="number" id="no" placeholder="Enter a number"> <br>
+
+                <button class="inpt" onclick="generateTable()">Generate Table</button>
+            </div>
+
+            <div id="tableContainer"></div>
+
+        </div>
+    </div>
+
+    <a href="../assignment5.html">All Questions of Assignment 5</a>
+
+
+    <script>
+        function generateTable() {
+            var n = document.getElementById("no")
+            var tableContainer = document.getElementById("tableContainer");
+            var number = parseInt(no.value);
+
+
+
+            if (!isNaN(number)) {
+                var table = document.createElement("table");
+                var tableHead = document.createElement("thead");
+                var tableBody = document.createElement("tbody");
+
+                // Create table header row
+                var headerRow = document.createElement("tr");
+                var headerCell = document.createElement("th");
+                headerCell.textContent = "Table of " + number;
+                headerCell.colSpan = "2";
+                headerRow.appendChild(headerCell);
+                tableHead.appendChild(headerRow);
+
+                // Create table body rows
+                for (var i = 1; i <= 10; i++) {
+                    var row = document.createElement("tr");
+
+                    var cell2 = document.createElement("td");
+
+                    cell2.textContent = number + " x " + i + " = " + number * i;
+
+                    row.appendChild(cell2);
+                    tableBody.appendChild(row);
+                }
+
+                // Append table head and body to the table
+                table.appendChild(tableHead);
+                table.appendChild(tableBody);
+
+                // Append the table to the table container
+                tableContainer.appendChild(table);
+            } else {
+                alert("Please enter a valid number!");
+            }
+        }
+
+
+
+
+
+
+    </script>
+</body>
+
+</html>

@@ -1,0 +1,100 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>as8-q2</title>
+    <link rel="stylesheet" href="../../../Styling/style.css">
+    <style>
+        input {
+            width: 150px;
+            height: 30px;
+            background-color: white;
+            border-radius: 10px;
+            text-align: center;
+            font-size: 15px;
+            border: #bda8d1;
+            margin: 5px;
+            margin-inline: 5px;
+
+
+        }
+
+
+        button {
+            width: 150px;
+            height: 30px;
+            background-color: #bda8d1;
+            border-radius: 10px;
+            text-align: center;
+            font-size: 10px;
+            border: white;
+            margin: 5px;
+            box-shadow: 2px 2px 2px 2px #634979;
+            color: white;
+        }
+        #output {
+            text-align: center;
+            color: white;
+            margin: 5px;
+            border: 1px solid white;
+            background-color: #634979;
+            padding: 10px;
+            border-radius: 10px;
+        }
+    </style>
+</head>
+
+<body>
+    <h1>Q # 2</h1>
+    <p>Write a JavaScript program that accept two integers and
+        display the larger. Also show if the two integers are equal</p>
+    <div class="box">
+        <small>output box</small>
+        <div class="box2">
+
+            <label>Enter 1st number</label><br>
+            <input id="n1" type="number" placeholder="Enter a number"><br>
+
+            <label>Enter 2nd number</label><br>
+            <input id="n2" type="number" placeholder="Enter a number"><br>
+
+            <button onclick="n()">Submit</button> <br>
+            <div id="output"></div>
+
+
+
+
+        </div>
+    </div>
+
+    <a href="../assignment8.html">All Questions of Assignment 8</a>
+
+
+    <script>
+
+        function n() {
+            var x = document.getElementById("n1").value;
+            var y = document.getElementById("n2").value;
+
+
+            if (x > y) {
+                document.getElementById("output").innerHTML = x+" is larger number"
+            }
+            else if (x < y) {
+               
+                document.getElementById("output").innerHTML = y+" is larger number"
+               
+                }
+            
+            else if (x == y) {
+
+                document.getElementById("output").innerHTML = "x = y"
+            }
+        }
+    </script>
+</body>
+
+</html>

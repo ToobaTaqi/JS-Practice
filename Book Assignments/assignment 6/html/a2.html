@@ -1,0 +1,104 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>as6-q2</title>
+    <link rel="stylesheet" href="../../../Styling/style.css">
+    <style>
+        input {
+            width: 200px;
+            height: 30px;
+            background-color: white;
+            border-radius: 10px;
+            text-align: center;
+            font-size: 15px;
+            border: #bda8d1;
+            margin: 5px;
+            margin-inline: 5px;
+
+
+        }
+
+
+        button {
+            width: 200px;
+            height: 30px;
+            background-color: #bda8d1;
+            border-radius: 10px;
+            text-align: center;
+            font-size: 10px;
+            border: white;
+            margin: 5px;
+            box-shadow: 2px 2px 2px 2px #634979;
+            color: white;
+
+
+        }
+
+
+
+        
+
+        .lab {
+            text-align: left;
+            margin-top: 20px;
+        }
+
+        hr {
+            width: 300px;
+            
+
+        }
+        .o{
+            margin-left: 10px;
+            font-size: 18px;
+        }
+    </style>
+</head>
+
+<body>
+    <h1>Q # 2</h1>
+    <p>What will be the output in variables a, b & result after execution of the following script:</p>
+        <p> var a = 2, b = 1;</p>
+        <p>var result = --a - --b + ++b + b--;</p>
+    <div class="box">
+        <small>output box</small>
+        <div class="box2">
+
+            <div id="output">
+
+                <div class="o">Values of variables a,b,result after execution:</div><br><hr class="o"><br>
+                <div class="o" id="output1"></div>
+                <div class="o" id="output2"></div>
+                <div class="o" id="output3"></div>
+                
+               
+            </div>
+
+            <!-- </div> -->
+
+
+
+
+        </div>
+    </div>
+
+    <a href="../assignment6.html">All Questions of Assignment 6</a>
+
+
+    <script>
+        var a = 2, b = 1;
+        document.getElementById('output1').innerHTML = 'a is : ' + a
+        document.getElementById('output2').innerHTML = 'b is : ' + b
+
+        var result = --a - --b + ++b + b--;
+        document.getElementById('output3').innerHTML = 'result is : ' + result
+        
+       
+    </script>
+</body>
+
+</html>

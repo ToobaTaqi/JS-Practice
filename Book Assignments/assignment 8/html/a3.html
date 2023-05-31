@@ -1,0 +1,101 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>as8-q3</title>
+    <link rel="stylesheet" href="../../../Styling/style.css">
+    <style>
+        input {
+            width: 150px;
+            height: 30px;
+            background-color: white;
+            border-radius: 10px;
+            text-align: center;
+            font-size: 15px;
+            border: #bda8d1;
+            margin: 5px;
+            margin-inline: 5px;
+
+
+        }
+
+
+        button {
+            width: 150px;
+            height: 30px;
+            background-color: #bda8d1;
+            border-radius: 10px;
+            text-align: center;
+            font-size: 10px;
+            border: white;
+            margin: 5px;
+            box-shadow: 2px 2px 2px 2px #634979;
+            color: white;
+        }
+        #output {
+            text-align: center;
+            color: white;
+            margin: 5px;
+            border: 1px solid white;
+            background-color: #634979;
+            padding: 10px;
+            border-radius: 10px;
+        }
+    </style>
+</head>
+
+<body>
+    <h1>Q # 3</h1>
+    <p>Write a program that takes input a number from user &
+        state whether the number is positive, negative or zero</p>
+    <div class="box">
+        <small>output box</small>
+        <div class="box2">
+
+            <label>Enter a number</label><br>
+            <input id="n" type="number" placeholder="Enter a number"><br>
+
+            <button onclick="n()">Submit</button> <br>
+            <div id="output"></div>
+
+
+
+
+        </div>
+    </div>
+
+    <a href="../assignment8.html">All Questions of Assignment 8</a>
+
+
+    <script>
+
+        function n() {
+            
+
+
+
+            var x = document.getElementById("n").value;
+
+           
+
+            if (x > 0) {
+                document.getElementById("output").innerHTML = "The number is +ve"
+            }
+            else if (x < 0) {
+               
+                    document.getElementById("output").innerHTML = "The number is -ve"
+               
+                }
+            
+            else if (x == 0) {
+
+                document.getElementById("output").innerHTML = "The number is 0"
+            }
+        }
+    </script>
+</body>
+
+</html>

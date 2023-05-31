@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>as9-q6</title>
+    <link rel="stylesheet" href="../../../Styling/style.css">
+    <style>
+        #qualifications-list {
+           
+            color: white;
+            margin: 5px;
+            border: 1px solid white;
+            background-color: #634979;
+            padding: 10px;
+            border-radius: 10px;
+        }
+    </style>
+</head>
+
+<body>
+    <h1>Q # 6</h1>
+    <p>Declare and Initialize an array and store available
+        education qualifications in Pakistan</p>
+    <div class="box">
+        <small>output box</small>
+        <div class="box2">
+
+
+            <!-- <button onclick="q()">show list</button> -->
+            <!-- <u>initiallized variable</u><ul id="qualifications-list" class="output" q()>
+            </ul> -->
+            <u><div>Qualifications in Pakistan</div></u>
+            <ul  id="qualifications-list"></ul>
+
+
+
+
+        </div>
+    </div>
+
+    <a href="../assignment9.html">All Questions of Assignment 9</a>
+
+
+    <script>
+        var qualifications = ["SSC", "HSC", "BCS", "BS", "BCOM", "MS", "M. Phil.", "PhD"];
+
+        var list = document.getElementById("qualifications-list");
+
+        for (var i = 0; i < qualifications.length; i++) {
+            var listItem = document.createElement("li");
+            listItem.textContent = qualifications[i];
+            list.appendChild(listItem);
+        }
+
+
+    </script>
+</body>
+
+</html>

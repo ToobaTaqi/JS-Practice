@@ -1,0 +1,112 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>as7-q6</title>
+    <link rel="stylesheet" href="../../../Styling/style.css">
+    <style>
+        input {
+            width: 200px;
+            height: 30px;
+            background-color: white;
+            border-radius: 10px;
+            text-align: center;
+            font-size: 15px;
+            border: #bda8d1;
+            margin: 5px;
+            margin-inline: 5px;
+
+
+        }
+
+
+        button {
+            width: 200px;
+            height: 30px;
+            background-color: #bda8d1;
+            border-radius: 10px;
+            text-align: center;
+            font-size: 10px;
+            border: white;
+            margin: 5px;
+            box-shadow: 2px 2px 2px 2px #634979;
+            color: white;
+        }
+
+        #output {
+
+            color: white;
+            margin-top: 5px;
+            border: 1px solid white;
+            background-color: #634979;
+            padding: 20px;
+            border-radius: 10px;
+            width: 200px;
+            height: 200px;
+        }
+    </style>
+</head>
+
+<body>
+    <h1>Q # 6</h1>
+    <p>Compute & show the resulting
+        percentage on your page. </p>
+    <div class="box">
+        <small>output box</small>
+        <div class="box2">
+
+            <label>Marks obtained in 3 subj</label><br>
+            <input id="m" type="number"><br>
+            <button onclick="A()">Submit</button>
+            <div id="output">
+                <h3><u> Marksheet </u></h3>
+                Total marks : 300 <br>
+                Marks Obtained :
+                <div id="output1"></div><hr>
+                Percentage :
+                <div id="output2"></div><hr>
+                Grade :
+                <div id="output3"></div><hr>
+                Remarks :
+                <div id="output4"></div>
+            </div>
+
+
+        </div>
+    </div>
+
+    <a href="../assignment7.html">All Questions of Assignment 7</a>
+
+
+    <script>
+        function A() {
+            var a = document.getElementById("m").value
+            var total = 300
+            var p = (a / total) * 100
+            document.getElementById("output1").innerHTML = a
+            document.getElementById("output2").innerHTML = p
+            if (p >= 80) {
+                document.getElementById("output3").innerHTML = 'A-one'
+                document.getElementById("output4").innerHTML = 'Excellent'
+            }
+            else if (p >= 70) {
+                document.getElementById("output3").innerHTML = 'A'
+                document.getElementById("output4").innerHTML = 'Good'
+            }
+            else if (p >= 60) {
+                document.getElementById("output3").innerHTML = 'B'
+                document.getElementById("output4").innerHTML = 'You need to improve'
+            }
+            else if (p < 60) {
+                document.getElementById("output3").innerHTML = 'Fail'
+                document.getElementById("output4").innerHTML = 'Sorry'
+            }
+            
+        }
+    </script>
+</body>
+
+</html>

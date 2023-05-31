@@ -1,0 +1,98 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>as5-q6</title>
+    <link rel="stylesheet" href="../../../Styling/style.css">
+    <style>
+        input {
+            width: 250px;
+            height: 50px;
+            background-color: white;
+            border-radius: 10px;
+            text-align: center;
+            font-size: 15px;
+            border: #bda8d1;
+            margin: 5px;
+        }
+
+        button {
+            width: 50px;
+            height: 50px;
+            background-color: #bda8d1;
+            border-radius: 10px;
+            text-align: center;
+            font-size: 10px;
+            border: white;
+            margin: 5px;
+            box-shadow: 2px 2px 2px 2px #634979;
+        }
+
+        button:hover {
+            background-color: white;
+        }
+
+        #output1,
+        #output2 {
+            text-align: center;
+            color: white;
+            margin: 5px;
+            border: 1px solid white;
+            background-color: #634979;
+            padding: 10px;
+            border-radius: 10px;
+        }
+    </style>
+</head>
+
+<body>
+    <h1>Q # 6</h1>
+    <p>The Temperature Converter: </p>
+    <div class="box">
+        <small>output box</small>
+        <div class="box2">
+
+            <h3>Celsius To Fahrenheit</h3>
+            <input type="number" id="ctof" placeholder="Temp. in celsius">
+            <button onclick="C()">Convert</button>
+            <div id="output1"></div>
+
+
+            <h3>Fahrenheit To Celsius</h3>
+            <input type="number" id="ftoc" placeholder="Temp. in Fahrenheit">
+            <button onclick="F()">Convert</button>
+            <div id="output2"></div>
+
+
+        </div>
+    </div>
+
+    <a href="../assignment5.html">All Questions of Assignment 5</a>
+
+
+    <script>
+        function C() {
+
+
+            var c = document.getElementById('ctof').value
+            var ctoff = (c * (9 / 5) + 32)
+            document.getElementById('output1').innerHTML = c + "C is " + ctoff + "F"
+        }
+        function F() {
+
+
+            var f = document.getElementById('ftoc').value
+            var ftocc = (f - 32) * (5 / 9)
+            document.getElementById('output2').innerHTML = f + "F is " + ftocc + "C"
+        }
+
+
+
+
+    </script>
+</body>
+
+</html>

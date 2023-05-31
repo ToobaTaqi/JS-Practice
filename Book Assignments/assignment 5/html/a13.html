@@ -1,0 +1,133 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>as5-q13</title>
+    <link rel="stylesheet" href="../../../Styling/style.css">
+    <style>
+        
+
+        input {
+            width: 200px;
+            height: 30px;
+            background-color: white;
+            border-radius: 10px;
+            text-align: center;
+            font-size: 15px;
+            border: #bda8d1;
+            margin: 5px;
+            margin-inline: 5px;
+
+
+        }
+
+
+        button {
+            width: 200px;
+            height: 30px;
+            background-color: #bda8d1;
+            border-radius: 10px;
+            text-align: center;
+            font-size: 10px;
+            border: white;
+            margin: 5px;
+            box-shadow: 2px 2px 2px 2px #634979;
+            color: white;
+
+
+        }
+
+
+
+        #output {
+            /* text-align: center; */
+            color: white;
+            margin-top: 5px;
+            border: 1px solid white;
+            background-color: #634979;
+            padding: 5px;
+            border-radius: 10px;
+            width: 500px;
+            height: 100px;
+
+        }
+
+        .lab {
+            text-align: left;
+            margin-top: 20px;
+        }
+    </style>
+</head>
+
+<body>
+    <h1>Q # 13</h1>
+    <p>The Lifetime Supply Calculator:</p>
+    <div class="box">
+        <small>output box</small>
+        <div class="box2">
+
+            
+
+                <div class="lab"><label>Enter Your fav. snack</label><br> </div>
+                <input type="text" id="snack" placeholder="Your fav. snack"><br>
+
+                <div class="lab"><label>Enter Your Current Age</label><br> </div>
+                <input type="number" id="age" placeholder="Your Current Age"><br>
+
+                <div class="lab"><label>Enter Estimated Max. Age</label><br> </div>
+                <input type="number" id="maxAge" placeholder="Estimated Max. Age"><br>
+
+                <div class="lab"><label>No. of snack you eat per day</label><br> </div>
+                <input type="number" id="amnt" placeholder="Amount of snack"><br>
+
+
+                <button onclick="B()">Calculate</button>
+            
+
+            <div id="output">
+
+                <div id="output1"></div>
+                <div id="output2"></div>
+                <div id="output3"></div>
+                <div id="output4"></div>
+                <div id="output5"></div>
+
+            </div>
+
+            <!-- </div> -->
+
+
+
+
+        </div>
+    </div>
+
+    <a href="../assignment5.html">All Questions of Assignment 5</a>
+
+
+    <script>
+        function B() {
+
+            var s = document.getElementById('snack').value
+            document.getElementById('output1').innerHTML = 'Fav. Snack : ' + s
+
+            var a = document.getElementById('age').value
+            document.getElementById('output2').innerHTML = 'Current Age : ' + a
+
+        
+            var ma =  document.getElementById('maxAge').value
+            document.getElementById('output3').innerHTML = 'Estimated Max. Age : ' + ma
+
+            var am =  document.getElementById('amnt').value
+            document.getElementById('output4').innerHTML = 'Amount of snacks per day : ' + am
+
+            var total= (ma - a)*am
+            document.getElementById('output5').innerHTML = 'You will need ' + total+' '+s+' to last you until ripe age of '+ma
+        }
+    </script>
+</body>
+
+</html>

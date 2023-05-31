@@ -1,0 +1,110 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>as5-q11</title>
+    <link rel="stylesheet" href="../../../Styling/style.css">
+    <style>
+        input {
+            width: 200px;
+            height: 30px;
+            background-color: white;
+            border-radius: 10px;
+            text-align: center;
+            font-size: 15px;
+            border: #bda8d1;
+            margin: 5px;
+            display: grid;
+            justify-content: right;
+        }
+
+
+        button {
+            width: 200px;
+            height: 30px;
+            background-color: #bda8d1;
+            border-radius: 10px;
+            text-align: center;
+            font-size: 10px;
+            border: white;
+            margin: 5px;
+            box-shadow: 2px 2px 2px 2px #634979;
+            color: white;
+            margin-bottom: 15px;
+            margin-top: -2px;
+        }
+
+
+
+        #output {
+            /* text-align: center; */
+            color: white;
+            margin: 2px;
+            border: 1px solid white;
+            background-color: #634979;
+            padding: 5px;
+            border-radius: 10px;
+            width: 200px;
+            height: 60px;
+
+        }
+
+        #lab {
+            text-align: center;
+            margin-bottom: 20px;
+        }
+    </style>
+</head>
+
+<body>
+    <h1>Q # 11</h1>
+    <p>The Age Calculator:</p>
+    <div class="box">
+        <small>output box</small>
+        <div class="box2">
+
+
+            <div id="lab">
+                <label>Enter Birth Year</label><br>
+
+            </div>
+            <input type="number" id="by" placeholder="Your birth year"><br>
+
+
+            <button onclick="B()">Calculate</button>
+
+
+            <div id="output">
+                Current Year: 2023 <br>
+                <div id="byo"> </div>
+                <div id="ya"></div>
+
+            </div>
+
+            <!-- </div> -->
+
+
+
+
+        </div>
+    </div>
+
+    <a href="../assignment5.html">All Questions of Assignment 5</a>
+
+
+    <script>
+        function B() {
+            var currentYear = 2023
+            var a = document.getElementById('by').value
+            document.getElementById('byo').innerHTML = 'Birth Year: '+a
+
+            var age = currentYear - a
+            document.getElementById('ya').innerHTML = 'Your Age is: ' + age
+        }
+    </script>
+</body>
+
+</html>

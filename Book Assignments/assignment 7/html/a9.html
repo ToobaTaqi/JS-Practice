@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>as7-q9</title>
+    <link rel="stylesheet" href="../../../Styling/style.css">
+    <style>
+        input {
+            width: 200px;
+            height: 30px;
+            background-color: white;
+            border-radius: 10px;
+            text-align: center;
+            font-size: 15px;
+            border: #bda8d1;
+            margin: 5px;
+            margin-inline: 5px;
+
+
+        }
+
+
+        button {
+            width: 200px;
+            height: 30px;
+            background-color: #bda8d1;
+            border-radius: 10px;
+            text-align: center;
+            font-size: 10px;
+            border: white;
+            margin: 5px;
+            box-shadow: 2px 2px 2px 2px #634979;
+            color: white;
+        }
+    </style>
+</head>
+
+<body>
+    <h1>Q # 9</h1>
+    <p>Write a program that takes temperature as input and
+        shows a message</p>
+    <div class="box">
+        <small>output box</small>
+        <div class="box2">
+
+            <label>Enter temperature</label><br>
+            <input id="m" type="number"><br>
+            <button onclick="A()">Submit</button>
+
+
+
+        </div>
+    </div>
+
+    <a href="../assignment7.html">All Questions of Assignment 7</a>
+
+
+    <script>
+
+        function A() {
+            var T = document.getElementById("m").value
+
+            if (T > 40) {
+                alert("It is too hot outside")
+            }
+            else if (T > 30) {
+
+                alert("The Weather today is Normal")
+            }
+            else if (T > 20) {
+
+                alert("Today’s Weather is cool")
+            }
+            else if (T > 10) {
+
+                alert("OMG! Today’s weather is so Cool")
+            }
+            else{
+                alert("Error!")
+            }
+
+        }
+    </script>
+</body>
+
+</html>

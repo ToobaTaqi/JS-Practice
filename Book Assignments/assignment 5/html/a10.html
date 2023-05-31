@@ -1,0 +1,112 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>as5-q10</title>
+    <link rel="stylesheet" href="../../../Styling/style.css">
+    <style>
+        input {
+            width: 200px;
+            height: 30px;
+            background-color: white;
+            border-radius: 10px;
+            text-align: center;
+            font-size: 15px;
+            border: #bda8d1;
+            margin: 5px;
+            display: grid;
+            justify-content: right;
+        }
+
+      
+        button {
+            width: 200px;
+            height: 30px;
+            background-color: #bda8d1;
+            border-radius: 10px;
+            text-align: center;
+            font-size: 10px;
+            border: white;
+            margin: 5px;
+            box-shadow: 2px 2px 2px 2px #634979;
+            color: white;
+            margin-bottom: 15px;
+            margin-top: -2px;
+        }
+
+
+
+        #output {
+            text-align: center;
+            color: white;
+            margin: 2px;
+            border: 1px solid white;
+            background-color: #634979;
+            padding: 5px;
+            border-radius: 10px;
+            width: 200px;
+            height: 20px;
+
+        }
+
+        #lab {
+            text-align: center;
+            margin-bottom: 20px;
+        }
+
+    </style>
+</head>
+
+<body>
+    <h1>Q # 10</h1>
+    <p>Write a program to initialize a variable with some
+        number and do arithmetic in following sequence:</p>
+    <div class="box">
+        <small>output box</small>
+        <div class="box2">
+
+          
+            <div id="lab">
+                <label>Enter a Number to</label><br>
+                <label>initialize the variable</label>
+            </div>
+            <input type="number" id="v" placeholder="No. to Init. var."><br>
+
+
+            <button onclick="D()">Calculate</button>
+
+
+            <div id="output"></div>
+
+            <!-- </div> -->
+
+
+
+
+        </div>
+    </div>
+
+    <a href="../assignment5.html">All Questions of Assignment 5</a>
+
+
+    <script>
+        function D() {
+            //o initialize a variable with some number
+            var a = document.getElementById('v').value
+            //Add 5
+            // a+=5
+            //Multiply by 10
+            // a*=10
+            //Divide the result by 2
+            // a/=2
+            //Perform all calculations in a single expression
+            a = (a + 5) * 10 / 2
+            document.getElementById('output').innerHTML = a
+        }
+    </script>
+</body>
+
+</html>
