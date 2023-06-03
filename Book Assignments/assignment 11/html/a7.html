@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>as11-q7</title>
+    <link rel="stylesheet" href="../../../Styling/style.css">
+  
+</head>
+
+<body>
+    <h1>Q # 7</h1>
+    <p>Write a program to replace the “Hyder” to “Islam” in the
+        word “Hyderabad”</p>
+    <div class="box">
+        <small>output box</small>
+        <div class="box2">
+
+
+            <div id="output1"></div>
+            <div id="output2"></div>
+
+
+
+        </div>
+    </div>
+
+    <a href="../assignment11.html">All Questions of Assignment 11</a>
+
+
+    <script>
+        var s = 'Hyderabad'
+        document.getElementById("output1").innerHTML='City: '+s
+        var n = 'Islam'
+        var a = s.slice(5, 9)
+        var x = n.concat(a)
+        document.getElementById("output2").innerHTML='After Replacement: '+x
+    </script>
+</body>
+
+</html>

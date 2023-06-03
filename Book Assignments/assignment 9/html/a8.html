@@ -1,0 +1,446 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>as9-q8</title>
+    <link rel="stylesheet" href="../../../Styling/style.css">
+    <style>
+        .box2{
+    border: 1px solid white;
+    border-radius: 10px;
+    padding: 2%;
+    padding-inline: 55px;
+    margin: auto;
+        }
+        .colors {
+            display: flex;
+            /* gap: 5px; */
+            background-color: white;
+            width: 700px;
+            height: 50px;
+            align-items: center;
+            justify-items: center;
+            border-radius: 5px;
+        }
+
+        .Amaranth,
+        .Bistre,
+        .Coral,
+        .Dandelion,
+        .Nadeshiko_Pink,
+        .Fallow,
+        .Gamboge,
+        .Heliotrope {
+            background-color: #E52B50;
+            width: 100px;
+            height: 40px;
+            text-align: center;
+            color: white;
+            border-radius: 5px;
+            margin: 5px;
+
+        }
+
+        .Bistre {
+            background-color: #3D2B1F;
+        }
+
+        .Coral {
+            background-color: #FF7F50;
+        }
+
+        .Dandelion {
+            background-color: #F0E130;
+        }
+
+        .Nadeshiko_Pink {
+            background-color: #F6ADC6;
+        }
+
+        .Fallow {
+            background-color: #C19A6B;
+        }
+
+        .Gamboge {
+            background-color: #E49B0F;
+        }
+
+        .Heliotrope {
+            background-color: #DF73FF;
+        }
+
+        #output1 {
+            text-align: center;
+            color: white;
+            margin: 5px;
+            border: 1px solid white;
+            background-color: #634979;
+            padding: 10px;
+            /* width: 600px; */
+            height: 50px;
+            border-radius: 10px;
+            display: flex;
+           justify-content: center;
+            align-items: center;
+            /* font-size: 18px; */
+        }
+
+        button {
+            width: 600px;
+            height: 30px;
+            background-color: #bda8d1;
+            border-radius: 10px;
+            text-align: center;
+            font-size: 15px;
+            border: white;
+            margin: 5px;
+            box-shadow: 2px 2px 2px 2px #634979;
+            color: white;
+        }
+        input {
+            width: 600px;
+            height: 30px;
+            background-color: white;
+            border-radius: 10px;
+            text-align: center;
+            font-size: 15px;
+            border: #bda8d1;
+            margin: 5px;
+            margin-inline: 5px;
+
+
+        }
+
+        /*  */
+
+        .dropbtn {
+            /* width: 200px; */
+            height: 30px;
+            background-color: #bda8d1;
+            border-radius: 10px;
+            text-align: center;
+            font-size: 15px;
+            border: white;
+            margin: 5px;
+            box-shadow: 2px 2px 2px 2px #634979;
+            color: white;
+            cursor: pointer;
+            width: 600px;
+        }
+
+        /* The container <div> - needed to position the dropdown content */
+        .dropdown {
+            position: relative;
+            display: inline-block;
+            
+        }
+
+        /* Dropdown Content (Hidden by Default) */
+        .dropdown-content {
+            display: none;
+            position: absolute;
+            background-color: #f9f9f9;
+            min-width: 200px;
+            box-shadow: 0px 8px 16px 0px #634979;
+            border-radius: 10px;
+            z-index: 1;
+            
+        }
+
+        /* Links inside the dropdown */
+        .dropdown-content a {
+            color: #634979;
+            font-size: 15px;
+            padding: 12px 16px;
+            text-decoration: none;
+            display: block;
+            
+        }
+
+        /* Change color of dropdown links on hover */
+        .dropdown-content a:hover {
+            background-color: #bda8d1
+
+        }
+
+        /* Show the dropdown menu on hover */
+        .dropdown:hover .dropdown-content {
+            display: block;
+        }
+
+        /* Change the background color of the dropdown button when the dropdown content is shown */
+        .dropdown:hover .dropbtn {
+            background-color: white;
+            color: #634979;
+        }
+    </style>
+</head>
+
+<body>
+    <h1>Q # 8</h1>
+    <p>Display the updated array in your
+        browser</p>
+    <div class="box">
+        <small>output box</small>
+        <div class="box2">
+            <label>This is our color pallete</label><br><br>
+            <div class="colors">
+                <div class="Amaranth">Amaranth</div>
+                <div class="Bistre">Bistre</div>
+                <div class="Coral">Coral</div>
+                <div class="Dandelion">Dandelion</div>
+                <div class="Nadeshiko_Pink">Nadeshiko Pink</div>
+                <div class="Fallow">Fallow</div>
+                <div class="Gamboge">Gamboge</div>
+                <div class="Heliotrope">Heliotrope</div>
+
+            </div>
+            <!-- <button onclick="q()">show list</button> -->
+            <!-- <u>initiallized variable</u><ul id="qualifications-list" class="output" q()>
+            </ul> -->
+
+            <br>
+            <div id="output"></div>
+            <br>
+            <label>This is our array</label>
+            <div id="output1"></div>
+            <div class="dropdown">
+                <button class="dropbtn">Select first color</button>
+                <div id="drop" class="dropdown-content">
+                    <a onclick="select('Amaranth', 'output1')">Amaranth</a>
+                    <a onclick="select('Bistre', 'output1')">Bistre</a>
+                    <a onclick="select('Coral', 'output1')">Coral</a>
+                    <a onclick="select('Dandelion', 'output1')">Dandelion</a>
+                    <a onclick="select('Nadeshiko Pink', 'output1')">Nadeshiko Pink</a>
+                    <a onclick="select('Fallow', 'output1')">Fallow</a>
+                </div>
+            </div><br>
+          
+
+<!-- 
+            <label>Which color you want on last position?</label> -->
+            <!-- <div id="output2"></div> -->
+            <div class="dropdown">
+                <button class="dropbtn">Select last color</button>
+                <div id="drop" class="dropdown-content">
+                    <a onclick="select1('Amaranth', 'output2')">Amaranth</a>
+                    <a onclick="select1('Bistre', 'output2')">Bistre</a>
+                    <a onclick="select1('Coral', 'output2')">Coral</a>
+                    <a onclick="select1('Dandelion', 'output2')">Dandelion</a>
+                    <a onclick="select1('Nadeshiko Pink', 'output2')">Nadeshiko Pink</a>
+                    <a onclick="select1('Fallow', 'output2')">Fallow</a>
+                </div>
+            </div>
+            <br>
+            <!-- <label>Add Two more colors in array</label> -->
+            <!-- <div id="output3"></div> -->
+            <button onclick="n()">Add 2 colors</button><br>
+            <button onclick="m()">Delete 1st color</button><br>
+            <button onclick="o()">Delete last color</button><br>
+
+            
+        
+           
+            <label>Write color name to add by your own</label><br>
+            <input id="inp" type="text" placeholder="write color name here"><br>
+            <input id="pos" type="number" placeholder="write color position here"><br>
+            <button onclick="add()">done</button>
+<br><br>
+            <label>Write color you wanna detele?</label><br>
+            <input id="pos2" type="number" placeholder="write color position here"><br>
+            <input id="count" type="number" placeholder="No. of colors to delete"><br>
+            <button onclick="dlt()">delete</button>
+            <br><br>
+            <label>reset everything</label><br>
+            <button onclick="reset()">reset</button>
+
+            
+        </div>
+    </div>
+
+    <a href="../assignment9.html">All Questions of Assignment 9</a>
+
+
+    <script>
+        
+
+        //
+        var colors = ['Amaranth', 'Bistre', 'Coral', 'Dandelion', 'Nadeshiko Pink', 'Fallow']
+        document.getElementById("output1").innerHTML = colors
+
+        function select(color) {
+            var currentIndex = colors.indexOf(color);
+            var desiredIndex = 0;
+            if (currentIndex !== -1) {
+                colors.splice(currentIndex, 1);
+                colors.splice(desiredIndex, 0, color);
+                document.getElementById("output1").innerHTML = colors;
+            }
+            else {
+                document.getElementById("output1").innerHTML ='Element not found in the array.'
+}
+        }
+
+        function select1(color) {
+            var currentIndex = colors.indexOf(color);
+            var desiredIndex = 6;
+            if (currentIndex !== -1) {
+                colors.splice(currentIndex, 1);
+                colors.splice(desiredIndex, 6, color);
+                document.getElementById("output1").innerHTML = colors;
+            }
+            else {
+                document.getElementById("output1").innerHTML ='Element not found in the array.'
+}
+        }
+        
+        function n() {
+
+
+            colors.unshift('Gamboge', 'Heliotrope')
+            document.getElementById("output1").innerHTML = colors
+        }
+       
+        function m() {
+           
+            colors.shift()
+
+
+            document.getElementById("output1").innerHTML = colors
+        }
+       
+        function o(){
+         colors.pop()
+            document.getElementById("output1").innerHTML =colors
+        }
+//
+        function handleColorAddition() {
+    var index = prompt("Enter the index at which you want to add the color:");
+    var color = prompt("Enter the color name:");
+    
+    if (index >= 0 && index <= colors.length) {
+        colors.splice(index, 0, color);
+        document.getElementById("output1").innerHTML = colors;
+    } else {
+        alert("Invalid index. Please enter a valid index within the range of the array.");
+    }
+}
+
+function add(){
+var inp=document.getElementById("inp").value
+var pos=document.getElementById("pos").value
+if (pos >= 0 && pos <= colors.length) {
+        colors.splice(pos, 0, inp);
+        document.getElementById("output1").innerHTML = colors;
+    } else {
+        document.getElementById("output1").innerHTML ="Invalid index"
+    }
+}
+function dlt() {
+    var dlti = document.getElementById("pos2").value
+    var count = document.getElementById("count").value
+    
+    dlti = parseInt(dlti);
+    count = parseInt(count);
+    
+    if (dlti >= 0 && dlti < colors.length && count > 0 && dlti + count <= colors.length) {
+       
+        
+        if (dlti >= 0 && dlti < colors.length) {
+            colors.splice(dlti, count);
+            document.getElementById("output1").innerHTML = colors;
+        } else {
+            document.getElementById("output1").innerHTML ="Invalid remove index"
+        }
+    } else {
+        document.getElementById("output1").innerHTML ="Invalid delete index"
+    }
+}
+function reset(){
+    var colors = ['Amaranth', 'Bistre', 'Coral', 'Dandelion', 'Nadeshiko Pink', 'Fallow']
+        document.getElementById("output1").innerHTML = colors
+}
+// function A(){
+//     var currentIndex = colors.indexOf('Amaranth');
+//     var desiredIndex = 0
+//     colors.splice(currentIndex, 1)
+//     colors.splice(desiredIndex, 0, 'Amaranth')
+//     document.getElementById("output1").innerHTML = colors
+// }
+// function B(){
+// var c=colors.slice(0,1)
+// var d=colors.slice(1,2)
+// var x=colors.slice(2,6)
+//     document.getElementById("output1").innerHTML = d +','+c+','+x
+// }
+// function C(){
+// var c=colors.slice(0,2)
+// var d=colors.slice(2,3)
+// var x=colors.slice(3,6)
+//     document.getElementById("output1").innerHTML = d +','+c+','+x
+// }
+// function D(){
+// var c=colors.slice(0,3)
+// var d=colors.slice(3,4)
+// var x=colors.slice(4,6)
+//     document.getElementById("output1").innerHTML = d +','+c+','+x
+// }
+// function E(){
+// var c=colors.slice(0,4)
+// var d=colors.slice(4,5)
+// var x=colors.slice(5,6)
+//     document.getElementById("output1").innerHTML = d +','+c+','+x
+// }
+// function F(){
+// var c=colors.slice(0,5)
+// var d=colors.slice(5,6)
+// var x=colors.slice(6,6)
+//     document.getElementById("output1").innerHTML = d +','+c+','+x
+// }
+
+
+// //
+// function a(){
+// var c=colors.slice(1,6)
+// var d=colors.slice(0,1)
+// var x=colors.slice(0,1)
+//     document.getElementById("output2").innerHTML = c+','+x
+// }
+// function b(){
+// var c=colors.slice(2,6)
+// var d=colors.slice(0,1)
+// var x=colors.slice(1,2)
+//     document.getElementById("output2").innerHTML = d +','+c+','+x
+// }
+// function c(){
+// var c=colors.slice(3,6)
+// var d=colors.slice(0,2)
+// var x=colors.slice(2,3)
+//     document.getElementById("output2").innerHTML = d +','+c+','+x
+// }
+// function d(){
+// var c=colors.slice(4,6)
+// var d=colors.slice(0,3)
+// var x=colors.slice(3,4)
+//     document.getElementById("output2").innerHTML = d +','+c+','+x
+// }
+// function e(){
+// var c=colors.slice(5,6)
+// var d=colors.slice(0,4)
+// var x=colors.slice(4,5)
+//     document.getElementById("output2").innerHTML = d +','+c+','+x
+// }
+// function f(){
+// var c=colors.slice(6,6)
+// var d=colors.slice(0,5)
+// var x=colors.slice(5,6)
+//     document.getElementById("output2").innerHTML = d +','+c+','+x
+// }
+
+    </script>
+</body>
+
+</html>

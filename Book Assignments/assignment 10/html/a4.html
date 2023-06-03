@@ -1,0 +1,129 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>as10-q4</title>
+    <link rel="stylesheet" href="../../../Styling/style.css">
+    <style>
+        input {
+            width: 200px;
+            height: 30px;
+            background-color: white;
+            border-radius: 10px;
+            text-align: center;
+            font-size: 15px;
+            border: #bda8d1;
+            margin: 5px;
+            margin-inline: 5px;
+
+
+        }
+
+
+        button {
+            width: 200px;
+            height: 30px;
+            background-color: #bda8d1;
+            border-radius: 10px;
+            text-align: center;
+            font-size: 10px;
+            border: white;
+            margin: 5px;
+            box-shadow: 2px 2px 2px 2px #634979;
+            color: white;
+
+
+        }
+
+
+
+        #output {
+            /* text-align: center; */
+            color: white;
+            margin-top: 5px;
+            border: 1px solid white;
+            background-color: #634979;
+            padding: 5px;
+            border-radius: 10px;
+            /* width: 500px;
+            height: 300px; */
+
+
+        }
+
+        /* .lab {
+            text-align: left;
+            margin-top: 20px;
+        } */
+    </style>
+</head>
+
+<body>
+    <h1>Q # 4</h1>
+    <p>Write a program to print multiplication table of any
+        number using for loop</p>
+    <div class="box">
+        <small>output box</small>
+        <div class="box2">
+
+            <div class="lab"><label>Enter a number to geerate table</label><br> </div>
+            <input type="number" id="a" placeholder="Enter any integer"><br>
+
+            <div class="lab"><label>Enter length of table</label><br> </div>
+            <input type="number" id="b" placeholder="Enter length"><br>
+
+
+            <button onclick="T()">Generate Table</button>
+            <div id="output"> 
+                <!-- <script>
+                    function T() {
+                        var n = document.getElementById("a").value;
+                        var table = "";
+            
+                        for (var i = 1; i <= 10; i++) {
+                            var row = "<div style='text-align:center;'>" + n + " x " + i + " = " + (n * i) + "<br></div>";
+                            table += row;
+                        }
+            
+                        document.getElementById("output").innerHTML = table;
+                    }
+                </script> -->
+            </div>
+
+
+
+        </div>
+    </div>
+
+    <a href="../assignment10.html">All Questions of Assignment 10</a>
+    <script>
+        function T() {
+            var n = document.getElementById("a").value;
+            var l = document.getElementById("b").value;
+            var table = "";
+
+            for (var i = 1; i <= l; i++) {
+                var row = "<div style='text-align:center;'>" + n + " x " + i + " = " + (n * i) + "<br></div>";
+                table += row;
+            }
+
+            document.getElementById("output").innerHTML = table;
+        }
+    </script>
+    <!-- <script>
+        function T() {
+            var n = document.getElementById("a").value
+            for (var i = 1; i <= 10; i++) {
+                document.write("<div style='text-align:center;'>"+ n + " x " + i + " = " + (n * i) + "<br>" +'</div>');
+                //   p = '<div>' + n + '*' + i + '=' + t + '</div>'
+                // a = document.write(p)
+            }
+        }
+    </script> -->
+
+</body>
+
+</html>

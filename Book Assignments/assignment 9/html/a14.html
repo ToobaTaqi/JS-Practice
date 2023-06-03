@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>as9-q14</title>
+    <link rel="stylesheet" href="../../../Styling/style.css">
+    <style>
+        select {
+            width: 160px;
+            height: 30px;
+            background-color: #bda8d1;
+            border-radius: 10px;
+            text-align: center;
+            font-size: 15px;
+            border: white;
+            margin: 5px;
+            box-shadow: 2px 2px 2px 2px #634979;
+            color: white;
+        }
+
+        select:hover {
+            background-color: white;
+            color: #634979;
+        }
+    </style>
+</head>
+
+<body>
+    <h1>Q # 14</h1>
+    <p>Display the following dropdown/select menu in your
+        browser</p>
+    <div class="box">
+        <small>output box</small>
+        <div class="box2">
+
+            <script>
+
+                var p = ["Apple", "Samsung", "Motorola", "Nokia", "Sony", "Haier"];
+        
+                // document.write(p)
+                var drop = '<select>'
+                for (var i = 0; i < 6; i++) {
+                    var m = p[i];
+                    drop += '<option value="' + m + '">' + m + '</option>';
+                }
+                drop += '</select>';
+                document.getElementById("output").innerHTML = document.write(drop)
+        
+        
+            </script>
+            <!-- <select>
+                <option value="Apple">Apple</option>
+                <option value="Samsung">Samsung</option>
+                <option value="Motorola">Motorola</option>
+                <option value="Nokia">Nokia</option>
+                <option value="Sony">Sony</option>
+                <option value="Haier">Haier</option>
+              </select> -->
+
+            <div id="output"></div>
+
+
+        </div>
+    </div>
+
+    <a href="../assignment9.html">All Questions of Assignment 9</a>
+
+
+</body>
+
+</html>

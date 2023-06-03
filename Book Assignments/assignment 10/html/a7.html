@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>as10-q7</title>
+    <link rel="stylesheet" href="../../../Styling/style.css">
+    <style>
+        input {
+            width: 200px;
+            height: 30px;
+            background-color: white;
+            border-radius: 10px;
+            text-align: center;
+            font-size: 15px;
+            border: #bda8d1;
+            margin: 5px;
+            margin-inline: 5px;
+
+
+        }
+
+
+        button {
+            width: 200px;
+            height: 30px;
+            background-color: #bda8d1;
+            border-radius: 10px;
+            text-align: center;
+            font-size: 10px;
+            border: white;
+            margin: 5px;
+            box-shadow: 2px 2px 2px 2px #634979;
+            color: white;
+
+
+        }
+
+
+
+     
+    </style>
+</head>
+
+<body>
+    <h1>Q # 7</h1>
+    <p>Write a program to enable “search by user input” in an
+        array</p>
+    <div class="box">
+        <small>output box</small>
+        <div class="box2">
+
+            <div><label>Search a bakery item</label><br> </div>
+            <input type="text" id="a" placeholder="Search here"><br>
+
+
+
+            <button onclick="B()">Search</button>
+           
+        </div>
+
+        <a href="../assignment10.html">All Questions of Assignment 10</a>
+
+        <script>
+            function B() {
+                var bakery = ['brownie', 'cupcake', 'cinnamon roll', 'apple pie', 'donut']
+                var s = document.getElementById("a").value
+                var search = s.toLowerCase()
+                var available = bakery.includes(search)
+                if (available) {
+                    alert(search + " is available in our bakery")
+                }
+                else if(search===""){
+                    alert("Please enter a valid item")
+                }
+                else {
+                    alert(search + " is not available in our bakery")
+                }
+            }
+        </script>
+</body>
+
+</html>

@@ -5,7 +5,7 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>as9-q7</title>
+    <title>as9-q9</title>
     <link rel="stylesheet" href="../../../Styling/style.css">
     <style>
         #qualifications-list {
@@ -21,17 +21,15 @@
 </head>
 
 <body>
-    <h1>Q # 7</h1>
-    <p>display
-        the scores & percentages of students</p>
+    <h1>Q # 9</h1>
+    <p>store student scores in an array &
+        sort the array in ascending order</p>
     <div class="box">
         <small>output box</small>
         <div class="box2">
 
-
-            <div id="output1"></div>
-            <div id="output2"></div>
-            <div id="output3"></div>
+<div id="output1"></div>
+<div id="output2"></div>
 
 
         </div>
@@ -41,14 +39,11 @@
 
 
     <script>
-        var s = ["s1", "s2", "s3"]
-        var n = [320, 230, 480]
-        var t = 500
+      
+        var n = [320, 230, 480, 120]
+        document.getElementById("output1").innerHTML ='Scores of students: '+ n
 
-
-        document.getElementById("output1").innerHTML = 'Score of ' + s[0] + ' is ' + n[0] + '. Percentage: ' + n[0] / t * 100 + '%'
-        document.getElementById("output2").innerHTML = 'Score of ' + s[1] + ' is ' + n[1] + '. Percentage: ' + n[1] / t * 100 + '%'
-        document.getElementById("output3").innerHTML = 'Score of ' + s[2] + ' is ' + n[2] + '. Percentage: ' + n[2] / t * 100 + '%'
+        document.getElementById("output2").innerHTML ='Ordered Scores of students: '+ n.sort()
 
 
 

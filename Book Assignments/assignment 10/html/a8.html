@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>as10-q8</title>
+    <link rel="stylesheet" href="../../../Styling/style.css">
+
+</head>
+
+<body>
+    <h1>Q # 8</h1>
+    <p>Write a program to identify the largest number in the
+        given array</p>
+    <div class="box">
+        <small>output box</small>
+        <div class="box2">
+
+            <div id="output1"></div>
+            <div id="output2"></div>
+            // searched by using 'for' loop
+
+        </div>
+
+        <a href="../assignment10.html">All Questions of Assignment 10</a>
+        <script>
+            var A = [24, 53, 78, 91, 12]
+            document.getElementById("output1").innerHTML = 'Array items: ' + A
+            var large = A[0] //assume
+            for (var i = 0; i <= A.length; i++) {
+                if (A[i] > large) {
+                    large = A[i]
+
+                }
+            }
+            document.getElementById("output2").innerHTML = 'Largest number is: ' + large
+
+        </script>
+
+</body>
+
+</html>

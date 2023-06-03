@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>as9-q13</title>
+    <link rel="stylesheet" href="../../../Styling/style.css">
+    <style>
+        #qualifications-list {
+
+            color: white;
+            margin: 5px;
+            border: 1px solid white;
+            background-color: #634979;
+            padding: 10px;
+            border-radius: 10px;
+        }
+    </style>
+</head>
+
+<body>
+    <h1>Q # 13</h1>
+    <p>y. Store values one by one in such a way
+        that you can access the values in reverse order(Last InFirst Out)</p>
+    <div class="box">
+        <small>output box</small>
+        <div class="box2">
+            
+            <label>Array:</label>
+            <div id="output1"></div><br>
+            <label>out:</label>
+            <div id="output2"></div><br>
+            <label>out:</label>
+            <div id="output3"></div><br>
+            <label>out:</label>
+            <div id="output4"></div><br>
+            <label>out:</label>
+            <div id="output5"></div>
+         
+
+
+        </div>
+    </div>
+
+    <a href="../assignment9.html">All Questions of Assignment 9</a>
+
+
+    <script>
+        var lifo=[]
+        lifo.push('a')
+        lifo.push('b')
+        lifo.push('c')
+        lifo.push('d')
+        document.getElementById("output1").innerHTML = lifo
+        var x=lifo.pop()
+        document.getElementById("output2").innerHTML = x
+        var y=lifo.pop()
+        document.getElementById("output3").innerHTML = y
+        var z=lifo.pop()
+        document.getElementById("output4").innerHTML = z
+        var a=lifo.pop()
+        document.getElementById("output5").innerHTML = a
+
+
+
+
+    </script>
+</body>
+
+</html>

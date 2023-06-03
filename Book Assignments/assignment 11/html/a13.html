@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>as11-q13</title>
+    <link rel="stylesheet" href="../../../Styling/style.css">
+    <style>
+        #output {
+            text-align: center;
+            color: white;
+            margin: 5px;
+            border: 1px solid white;
+            background-color: #634979;
+            padding: 10px;
+            border-radius: 10px;
+        }
+
+        input {
+            width: 200px;
+            height: 30px;
+            background-color: white;
+            border-radius: 10px;
+            text-align: center;
+            font-size: 15px;
+            border: #bda8d1;
+            margin: 5px;
+            margin-inline: 5px;
+
+
+        }
+
+
+        button {
+            width: 200px;
+            height: 30px;
+            background-color: #bda8d1;
+            border-radius: 10px;
+            text-align: center;
+            font-size: 10px;
+            border: white;
+            margin: 5px;
+            box-shadow: 2px 2px 2px 2px #634979;
+            color: white;
+
+
+        }
+    </style>
+</head>
+
+<body>
+    <h1>Q # 13</h1>
+    <p>If the username contains any special symbol
+        among [@ . , !], prompt the user to enter a valid username</p>
+    <div class="box">
+        <small>output box</small>
+        <div class="box2">
+
+            <label>Enter your name</label><br>
+            <input type="text" id="a" placeholder="Enter here"><br>
+
+            <button onclick="A()">submit</button>
+
+            <div id="output"></div>
+
+
+
+
+        </div>
+    </div>
+
+    <a href="../assignment11.html">All Questions of Assignment 11</a>
+
+
+    <script>
+        function A() {
+            var s = document.getElementById("a").value
+            var p = /[@ . , !]/
+            var rslt
+            if (rslt = p.test(s)) {
+                alert("Please enter a valid username")
+            }
+
+            else {
+                document.getElementById("output").innerHTML = "User Name Exepted"
+            }
+        }
+    </script>
+</body>
+
+</html>
