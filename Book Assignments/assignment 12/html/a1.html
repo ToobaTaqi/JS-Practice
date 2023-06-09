@@ -1,0 +1,98 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>as12-q1</title>
+    <link rel="stylesheet" href="../../../Styling/style.css">
+    <style>
+        #output {
+            text-align: center;
+            color: white;
+            margin: 5px;
+            border: 1px solid white;
+            background-color: #634979;
+            padding: 10px;
+            border-radius: 10px;
+        }
+
+        input {
+            width: 200px;
+            height: 30px;
+            background-color: white;
+            border-radius: 10px;
+            text-align: center;
+            font-size: 15px;
+            border: #bda8d1;
+            margin: 5px;
+            margin-inline: 5px;
+
+
+        }
+
+
+        button {
+            width: 200px;
+            height: 30px;
+            background-color: #bda8d1;
+            border-radius: 10px;
+            text-align: center;
+            font-size: 10px;
+            border: white;
+            margin: 5px;
+            box-shadow: 2px 2px 2px 2px #634979;
+            color: white;
+
+
+        }
+    </style>  
+</head>
+
+<body>
+    <h1>Q # 1</h1>
+    <p>assume a big qustion here</p>
+    <div class="box">
+        <small>output box</small>
+        <div class="box2">
+
+            <label>Enter +ve integer</label><br>
+            <input type="text" id="a" placeholder="Integer here"><br>
+
+            <button onclick="A()">submit</button>
+
+            <div id="output">
+            <div id="output1">_</div>
+            <div id="output2">_</div>
+            <div id="output3">_</div>
+            <div id="output4">_</div>
+        </div>
+
+
+
+        </div>
+    </div>
+
+    <a href="../assignment12.html">All Questions of Assignment 12</a>
+
+ 
+    <script>
+        function A(){
+       var u = document.getElementById("a").value
+var n = parseInt(u);
+var roundOff = Math.round(n);
+var floorValue = Math.floor(n);
+var ceilValue = Math.ceil(n);
+
+document.getElementById("output1").innerHTML="Number: " + n + "<br>"
+document.getElementById("output2").innerHTML="Round-off value: " + roundOff + "<br>"
+document.getElementById("output3").innerHTML="Floor value: " + floorValue + "<br>"
+document.getElementById("output4").innerHTML="Ceil value: " + ceilValue + "<br>"
+
+}
+
+    </script>
+</body>
+
+</html>
