@@ -79,24 +79,26 @@
 
     <script>
 
-//var u=prompt("Enter a negative floating-point number:");
-        var u = document.getElementById("a").value
+        //var u=prompt("Enter a negative floating-point number:");
+
         function A() {
+            var u = document.getElementById("a").value
             if (u <= 0) {
-                   
-              var n = parseFloat(u);
-var roundOff = Math.round(n);
-var floorValue = Math.floor(n);
-var ceilValue = Math.ceil(n);
+
+                var n = parseFloat(u);
+                var roundOff = Math.round(n);
+                var floorValue = Math.floor(n);
+                var ceilValue = Math.ceil(n);
 
                 document.getElementById("output1").innerHTML = "Number: " + n
                 document.getElementById("output2").innerHTML = "Round-off value: " + roundOff
                 document.getElementById("output3").innerHTML = "Floor value: " + floorValue
                 document.getElementById("output4").innerHTML = "Ceil value: " + ceilValue
-                
+
             }
+           
             else {
-                document.getElementById("output1").innerHTML = "Enter a -ve integer"
+                document.getElementById("output").innerHTML = "Enter a -ve integer"
 
             }
         }

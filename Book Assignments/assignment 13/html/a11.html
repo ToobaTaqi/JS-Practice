@@ -5,7 +5,7 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>as12-q3</title>
+    <title>as13-q11</title>
     <link rel="stylesheet" href="../../../Styling/style.css">
     <style>
         #output {
@@ -16,22 +16,8 @@
             background-color: #634979;
             padding: 10px;
             border-radius: 10px;
+            width: 300px;
         }
-
-        input {
-            width: 200px;
-            height: 30px;
-            background-color: white;
-            border-radius: 10px;
-            text-align: center;
-            font-size: 15px;
-            border: #bda8d1;
-            margin: 5px;
-            margin-inline: 5px;
-
-
-        }
-
 
         button {
             width: 200px;
@@ -51,42 +37,39 @@
 </head>
 
 <body>
-    <h1>Q # 3</h1>
-    <p>Write a program that displays the absolute value of a
-        number</p>
+    <h1>Q # 11</h1>
+    <p>Create a Date object for the current date and time. Extract the hours, reset the date object an hour ahead and finally display the date object in your browser</p>
     <div class="box">
         <small>output box</small>
         <div class="box2">
 
-            <label>Enter number</label><br>
-            <input type="text" id="a" placeholder="Enter here"><br>
-
-            <button onclick="A()">submit</button>
+            <button onclick="A()">Check Out</button>
 
             <div id="output">
-                <div id="output1">_</div>
-                <div id="output2">_</div>
-                <!-- <div id="output3">_</div>
-                <div id="output4">_</div> -->
+                <div id="output1">-</div><br>
+                <div id="output2">-</div>
             </div>
-
-
 
         </div>
     </div>
 
-    <a href="../assignment12.html">All Questions of Assignment 12</a>
+    <a href="../assignment13.html">All Questions of Assignment 13</a>
 
 
     <script>
 
-        //var u=prompt("Enter a negative floating-point number:");
-
         function A() {
-            var u = document.getElementById("a").value
-            document.getElementById("output1").innerHTML = "Number : " + u
-            document.getElementById("output2").innerHTML = "Absolute value : " + Math.abs(u)
+            var obj = new Date()
+            var d=obj.getDate()
+            var t=obj.getHours() 
+            obj.setHours(t-1)
+
+
+           
+            document.getElementById("output1").innerHTML = 'Current date: '+obj
+            document.getElementById("output2").innerHTML = '1 hour ago, it was: '+obj
         }
+
     </script>
 </body>
 

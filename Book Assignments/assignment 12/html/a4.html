@@ -5,7 +5,7 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>as12-q3</title>
+    <title>as12-q4</title>
     <link rel="stylesheet" href="../../../Styling/style.css">
     <style>
         #output {
@@ -17,22 +17,6 @@
             padding: 10px;
             border-radius: 10px;
         }
-
-        input {
-            width: 200px;
-            height: 30px;
-            background-color: white;
-            border-radius: 10px;
-            text-align: center;
-            font-size: 15px;
-            border: #bda8d1;
-            margin: 5px;
-            margin-inline: 5px;
-
-
-        }
-
-
         button {
             width: 200px;
             height: 30px;
@@ -44,30 +28,25 @@
             margin: 5px;
             box-shadow: 2px 2px 2px 2px #634979;
             color: white;
-
-
         }
     </style>
 </head>
 
 <body>
-    <h1>Q # 3</h1>
-    <p>Write a program that displays the absolute value of a
-        number</p>
+    <h1>Q # 4</h1>
+    <p>Write a program that simulates a dice using random()
+        method of JS Math class</p>
     <div class="box">
         <small>output box</small>
         <div class="box2">
-
+            <!-- 
             <label>Enter number</label><br>
-            <input type="text" id="a" placeholder="Enter here"><br>
+            <input type="text" id="a" placeholder="Enter here"><br> -->
 
-            <button onclick="A()">submit</button>
+            <button onclick="A()">Through Dice</button>
 
             <div id="output">
-                <div id="output1">_</div>
-                <div id="output2">_</div>
-                <!-- <div id="output3">_</div>
-                <div id="output4">_</div> -->
+
             </div>
 
 
@@ -80,12 +59,15 @@
 
     <script>
 
-        //var u=prompt("Enter a negative floating-point number:");
-
         function A() {
-            var u = document.getElementById("a").value
-            document.getElementById("output1").innerHTML = "Number : " + u
-            document.getElementById("output2").innerHTML = "Absolute value : " + Math.abs(u)
+            var u = Math.random() * 10
+            if (u <= 6) {
+                document.getElementById("output").innerHTML = "Random Dice value : " + Math.round(u)
+            }
+            else {
+                return 6
+            }
+
         }
     </script>
 </body>

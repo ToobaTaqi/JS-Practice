@@ -57,8 +57,8 @@
         <small>output box</small>
         <div class="box2">
 
-            <label>Enter +ve integer</label><br>
-            <input type="text" id="a" placeholder="Integer here"><br>
+            <label>Enter +ve number</label><br>
+            <input type="text" id="a" placeholder="Enter here"><br>
 
             <button onclick="A()">submit</button>
 
@@ -80,12 +80,12 @@
     <script>
         function A(){
        var u = document.getElementById("a").value
-var n = parseInt(u);
-var roundOff = Math.round(n);
-var floorValue = Math.floor(n);
-var ceilValue = Math.ceil(n);
+//var n = parseInt(u);
+var roundOff = Math.round(u);
+var floorValue = Math.floor(u);
+var ceilValue = Math.ceil(u);
 
-document.getElementById("output1").innerHTML="Number: " + n + "<br>"
+document.getElementById("output1").innerHTML="Number: " + u + "<br>"
 document.getElementById("output2").innerHTML="Round-off value: " + roundOff + "<br>"
 document.getElementById("output3").innerHTML="Floor value: " + floorValue + "<br>"
 document.getElementById("output4").innerHTML="Ceil value: " + ceilValue + "<br>"

@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>as13-q13</title>
+    <link rel="stylesheet" href="../../../Styling/style.css">
+    <style>
+        #output {
+            text-align: center;
+            color: white;
+            margin: 5px;
+            border: 1px solid white;
+            background-color: #634979;
+            padding: 10px;
+            border-radius: 10px;
+            width: 180px;
+        }
+
+        button {
+            width: 200px;
+            height: 30px;
+            background-color: #bda8d1;
+            border-radius: 10px;
+            text-align: center;
+            font-size: 10px;
+            border: white;
+            margin: 5px;
+            box-shadow: 2px 2px 2px 2px #634979;
+            color: white;
+
+
+        }
+
+        input {
+            width: 200px;
+            height: 30px;
+            background-color: white;
+            border-radius: 10px;
+            text-align: center;
+            font-size: 15px;
+            border: #bda8d1;
+            margin: 5px;
+            margin-inline: 5px;
+
+
+        }
+    </style>
+</head>
+
+<body>
+    <h1>Q # 13</h1>
+    <p>Write a program to ask the user about his age. Calculate
+        and show his birth year in your browser.</p>
+    <div class="box">
+        <small>output box</small>
+        <div class="box2">
+
+            <label>Enter your Age Below:</label><br>
+            <input id="a" type="number" placeholder="Enter here"><br>
+            <button onclick="A()">Check Out</button>
+
+            <div id="output">
+                <div id="output1">-</div><br>
+                <div id="output2">-</div>
+            </div>
+
+        </div>
+    </div>
+
+    <a href="../assignment13.html">All Questions of Assignment 13</a>
+
+
+    <script>
+
+        function A() {
+
+            var age = document.getElementById("a").value
+            var obj = new Date()
+            var d = obj.getFullYear()
+            var by = d - age
+            document.getElementById("output1").innerHTML = 'Your age is: ' + age
+            document.getElementById("output2").innerHTML = 'Your birth year was: ' + by
+        }
+
+    </script>
+</body>
+
+</html>

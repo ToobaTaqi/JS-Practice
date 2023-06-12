@@ -5,7 +5,7 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>as12-q3</title>
+    <title>as13-q6</title>
     <link rel="stylesheet" href="../../../Styling/style.css">
     <style>
         #output {
@@ -16,22 +16,8 @@
             background-color: #634979;
             padding: 10px;
             border-radius: 10px;
+            width: 300px;
         }
-
-        input {
-            width: 200px;
-            height: 30px;
-            background-color: white;
-            border-radius: 10px;
-            text-align: center;
-            font-size: 15px;
-            border: #bda8d1;
-            margin: 5px;
-            margin-inline: 5px;
-
-
-        }
-
 
         button {
             width: 200px;
@@ -51,23 +37,17 @@
 </head>
 
 <body>
-    <h1>Q # 3</h1>
-    <p>Write a program that displays the absolute value of a
-        number</p>
+    <h1>Q # 6</h1>
+    <p>Write a program that shows the given message</p>
     <div class="box">
         <small>output box</small>
         <div class="box2">
-
-            <label>Enter number</label><br>
-            <input type="text" id="a" placeholder="Enter here"><br>
-
-            <button onclick="A()">submit</button>
+            <button onclick="A()">Click Me</button>
 
             <div id="output">
-                <div id="output1">_</div>
-                <div id="output2">_</div>
-                <!-- <div id="output3">_</div>
-                <div id="output4">_</div> -->
+                <div id="output1">-</div><br>
+                <div id="output2">-</div><br>
+                <div id="output3">-</div>
             </div>
 
 
@@ -75,18 +55,23 @@
         </div>
     </div>
 
-    <a href="../assignment12.html">All Questions of Assignment 12</a>
+    <a href="../assignment13.html">All Questions of Assignment 13</a>
 
 
     <script>
 
-        //var u=prompt("Enter a negative floating-point number:");
-
         function A() {
-            var u = document.getElementById("a").value
-            document.getElementById("output1").innerHTML = "Number : " + u
-            document.getElementById("output2").innerHTML = "Absolute value : " + Math.abs(u)
+            var a = new Date()
+            var b = a.getTime()
+           
+            var c = new Date(1970, 1, 1)
+            var milliS=b-c
+            var mins = 1 / 60000
+            document.getElementById("output1").innerHTML = 'Curent Date: ' + a
+            document.getElementById("output2").innerHTML ='Elapsed milliseconds since jan 1, 1970: '+milliS + 'milliseconds'
+            document.getElementById("output3").innerHTML ='Elapsed minutes since jan 1, 1970: '+ milliS *mins + 'minutes'
         }
+
     </script>
 </body>
 
